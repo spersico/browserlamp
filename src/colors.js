@@ -1,4 +1,4 @@
-const colors = [
+export const colors = [
   { name: "Black", kelvin: 0, value: "0,0,0" },
   { name: "Candle", kelvin: 1900, value: "255,147,41" },
   { name: "40W Tungsten", kelvin: 2600, value: "255, 197, 143  " },
@@ -11,4 +11,15 @@ const colors = [
   { name: "Clear Blue Sky", kelvin: 20000, value: "64, 156, 255" },
 ]
 
-export default colors
+export function coloredLog(name, color) {
+  console.log(`%c -> ${name}: ${color}`, `color: rgb(${color})`)
+}
+const randomBetween = (min, max) =>
+  min + Math.floor(Math.random() * (max - min + 1))
+
+export function randomRGB() {
+  return `${randomBetween(0, 255)}, ${randomBetween(0, 255)}, ${randomBetween(
+    0,
+    255
+  )}`
+}
