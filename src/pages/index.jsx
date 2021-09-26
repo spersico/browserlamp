@@ -1,18 +1,15 @@
-import Counter from "~/components/Counter"
+import ColorChanger from "~/components/ColorChanger"
+import { createSignal } from "solid-js"
+
 import "./index.css"
+import colors from "~/colors"
 
 export default function Home() {
+  const [globalColor, setGlobalColor] = createSignal(colors[0].value)
+
   return (
-    <main style={{ background: "black" }}>
-      <h1>Hello world!</h1>
-      <Counter />
-      <p>
-        Visit{" "}
-        <a href="https://solidjs.com" target="_blank">
-          solidjs.com
-        </a>{" "}
-        to learn how to build Solid apps.
-      </p>
+    <main style={{ background: `rgb(${globalColor()})` }}>
+      <ColorChanger globalColor={globalColor} onChangeColor={setGlobalColor} />
     </main>
   )
 }

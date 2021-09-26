@@ -1,0 +1,20 @@
+.colorChangers{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 0.5em;
+}
+
+
+.colorChangers button {
+  border-radius: 1em;
+  border: 2px solid rgba(68, 107, 158, 0);
+  outline: none;
+  width: 25px;
+  height: 25px;
+  cursor:pointer;
+}
+
+.colorChangers button.selected{
+  border: 2px solid red;
+}
