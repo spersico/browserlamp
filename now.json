@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "browserlamp",
+    "builds": [
+        { "src": "index.js", "use": "@now/vite" }
+    ],
+    "routes": [
+        { "src": "/(.*)", "dest": "index.js" }
+    ]
+}
