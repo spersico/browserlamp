@@ -1,0 +1,95 @@
+
+
+.main-switch {
+  position: relative;
+  width: 110px;
+  height: 35px;
+  margin: 20px 19px 0px ;
+  overflow: hidden;
+}
+
+.main-switch {
+    border-radius: 2px;
+}
+
+
+.main-switch .knobs,.main-switch .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.main-switch .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.main-switch .knobs {
+    z-index: 2;
+}
+
+.main-switch .layer {
+    width: 100%;
+    background-color: var(--alternative-darker);
+    transition: 0.3s ease all;
+    z-index: 1;
+    border: 2px solid var(--alternative)
+}
+
+.main-switch .knobs:before, .main-switch .knobs:after, .main-switch .knobs span {
+    position: absolute;
+    top: 4px;
+    width: 40px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 2px;
+    transition: 0.3s ease all;
+}
+
+.main-switch .knobs:before {
+    content: '';
+    left: 4px;
+    background-color: var(--red);
+}
+
+.main-switch .knobs:after {
+    content: 'ON';
+    right: 4px;
+    color: var(--black);
+}
+
+.main-switch .knobs span {
+    display: inline-block;
+    left: 4px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.main-switch .checkbox:checked + .knobs span {
+    color: var(--dark);
+}
+
+.main-switch .checkbox:checked + .knobs:before {
+    left: 58px;
+    background-color: var(--action);
+}
+
+.main-switch .checkbox:checked + .knobs:after {
+    color: var(--white);
+}
+
+.main-switch .checkbox:checked ~ .layer {
+    background-color: var(--alternative);
+}

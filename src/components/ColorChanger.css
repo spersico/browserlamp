@@ -1,20 +1,38 @@
-.colorChangers{
+.popup#colorChangers {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  width: 50px;
+  margin:10px 0px 0px 20px;
+}
+
+ .colorChangers{
+  display: flex;
+  flex-direction: column;
+  padding-top: 0em;
+  padding-left: 10px;
   gap: 0.5em;
 }
 
-
 .colorChangers button {
-  border-radius: 1em;
-  border: 2px solid rgba(68, 107, 158, 0);
+  border-radius: 2px;
+  border: 2px solid var(--black);
   outline: none;
-  width: 25px;
+  width: 40px;
   height: 25px;
   cursor:pointer;
 }
 
 .colorChangers button.selected{
-  border: 2px solid red;
+  border: 2px solid var(--action);
+}
+
+.colorChangers button.randomColor {
+  border: 2px solid var(--alternative);
+  background-color: var(--black);
+  color:var(--action);
+}
+
+.colorChangers button.randomColor span {
+  margin-left:0px;
+  margin-top:2px;
 }
