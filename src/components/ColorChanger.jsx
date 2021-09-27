@@ -1,4 +1,4 @@
-import { colors, randomRGB } from "~/colors"
+import { colors, randomRGB } from "./../colors"
 import "./ColorChanger.css"
 import Popup from "./Popup"
 

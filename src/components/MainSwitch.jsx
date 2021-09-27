@@ -1,4 +1,4 @@
-import { colors } from "~/colors"
+import { colors } from "./../colors"
 import "./MainSwitch.css"
 
 export default function MainSwitch({ lastColor, isOn, onChangeColor }) {

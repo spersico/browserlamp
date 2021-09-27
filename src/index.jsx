@@ -1,11 +1,13 @@
 import { createSignal } from "solid-js"
+import { render } from "solid-js/web"
 
 import "./index.css"
-import { colors, coloredLog } from "~/colors"
-import MainSwitch from "~/components/MainSwitch"
-import ColorChanger from "~/components/ColorChanger"
+import { colors, coloredLog } from "./colors"
+import MainSwitch from "./components/MainSwitch"
+import ColorChanger from "./components/ColorChanger"
+import Footer from "./components/Footer"
 
-export default function Home() {
+function Home() {
   const [globalColor, setGlobalColor] = createSignal(colors[0].value)
   const [lastColor, setLastColor] = createSignal(colors[1].value)
   const [lampIsOn, setLampSwitch] = createSignal(false)
@@ -31,6 +33,9 @@ export default function Home() {
         globalColor={globalColor}
         onChangeColor={onChangeGlobalColor}
       />
+      <Footer />
     </main>
   )
 }
+
+render(Home, document.getElementById("root"))
