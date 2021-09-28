@@ -1,0 +1,12 @@
+ .colorPicker{
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+  padding-left: 10px;
+  gap: 0.5em;
+}
+
+#label {
+  cursor: pointer;
+  
+}

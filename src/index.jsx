@@ -6,6 +6,7 @@ import { colors, coloredLog } from './colors';
 import MainSwitch from './components/MainSwitch';
 import ColorChanger from './components/ColorChanger';
 import Footer from './components/Footer';
+import ColorPicker from './components/ColorPicker';
 
 function Home() {
   const [globalColor, setGlobalColor] = createSignal(colors[0].value);
@@ -22,32 +23,6 @@ function Home() {
     coloredLog('global', globalColor());
   };
 
-  const pickerHexToRgb = (hex) => {
-    hex = hex.replace(/#/g, '');
-    if (hex.length === 3) {
-      hex = hex
-        .split('')
-        .map(function (hex) {
-          return hex + hex;
-        })
-        .join('');
-    }
-    // validate hex format
-    let result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})[\da-z]{0,0}$/i.exec(
-      hex
-    );
-    if (result) {
-      let red = parseInt(result[1], 16);
-      let green = parseInt(result[2], 16);
-      let blue = parseInt(result[3], 16);
-
-      const hexColor = `${red},${green},${blue}`;
-      onChangeGlobalColor(hexColor);
-    } else {
-      return null;
-    }
-  };
-
   return (
     <main style={{ background: `rgb(${globalColor()})` }}>
       <MainSwitch
@@ -59,12 +34,10 @@ function Home() {
         globalColor={globalColor}
         onChangeColor={onChangeGlobalColor}
       />
-      <input
-        type='color'
-        value={globalColor}
-        onInput={(e) => {
-          pickerHexToRgb(e.target.value);
-        }}
+
+      <ColorPicker
+        globalColor={globalColor}
+        onChangeColor={onChangeGlobalColor}
       />
       <Footer />
     </main>
