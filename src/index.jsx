@@ -35,10 +35,6 @@ function Home() {
         onChangeColor={onChangeGlobalColor}
       />
 
-      <ColorPicker
-        globalColor={globalColor}
-        onChangeColor={onChangeGlobalColor}
-      />
       <Footer />
     </main>
   );
