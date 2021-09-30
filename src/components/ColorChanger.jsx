@@ -34,7 +34,7 @@ export default function ColorChanger({ globalColor, onChangeColor }) {
               </svg>
             </span>
           </button>
-          <span class='randomColor'>
+          <span role='button' class='randomColor'>
             <ColorPicker
               globalColor={globalColor}
               onChangeColor={onChangeColor}

@@ -1,31 +1,12 @@
+import { pickerHexToRgb } from './../colors';
 import './ColorPicker.css';
 
 export default function ColorPicker({ globalColor, onChangeColor }) {
-  const pickerHexToRgb = (hex) => {
-    hex = hex.replace(/#/g, '');
-    if (hex.length === 3) {
-      hex = hex
-        .split('')
-        .map(function (hex) {
-          return hex + hex;
-        })
-        .join('');
-    }
-    // validate hex format
-    let result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})[\da-z]{0,0}$/i.exec(
-      hex
-    );
-    if (result) {
-      let red = parseInt(result[1], 16);
-      let green = parseInt(result[2], 16);
-      let blue = parseInt(result[3], 16);
-
-      const hexColor = `${red},${green},${blue}`;
-      onChangeColor(hexColor);
-    } else {
-      return null;
-    }
+  const colorPickerChange = (hex) => {
+    const returnedColor = pickerHexToRgb(hex);
+    onChangeColor(returnedColor);
   };
+
   return (
     <div class='colorPicker'>
       <label id='label'>
@@ -47,7 +28,7 @@ export default function ColorPicker({ globalColor, onChangeColor }) {
           value={globalColor}
           placeholder='Username'
           onInput={(e) => {
-            pickerHexToRgb(e.target.value);
+            colorPickerChange(e.target.value);
           }}
         />
       </label>
