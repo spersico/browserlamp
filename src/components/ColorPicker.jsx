@@ -15,7 +15,7 @@ export default function ColorPicker({ globalColor, onChangeColor }) {
           xmlns:xlink='http://www.w3.org/1999/xlink'
           version='1.1'
           width='18px'
-          height='18px'
+          height='22px'
           viewBox='0 0 390 390'
           fill='var(--action)'
         >
@@ -24,7 +24,7 @@ export default function ColorPicker({ globalColor, onChangeColor }) {
         </svg>
         <input
           type='color'
-          hidden
+          id='inputColor'
           value={globalColor}
           placeholder='Username'
           onInput={(e) => {

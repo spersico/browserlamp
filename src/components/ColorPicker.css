@@ -14,4 +14,8 @@
   cursor:pointer;
 }
 
-
+#inputColor {
+  display: block;
+  visibility: hidden;
+  margin-top: -15;
+}
