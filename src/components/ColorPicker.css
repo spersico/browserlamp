@@ -1,12 +1,17 @@
  .colorPicker{
   display: flex;
-  flex-direction: row;
-  padding-top: 1em;
-  padding-left: 10px;
+  flex-direction: column;
+  padding-top: 0em;
   gap: 0.5em;
 }
 
 #label {
-  cursor: pointer;
-  
+  border-radius: 2px;
+  border: 2px solid var(--white);
+  outline: none;
+  width: 36px;
+  height: 22px;
+  cursor:pointer;
 }
+
+
