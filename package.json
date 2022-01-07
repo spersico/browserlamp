@@ -13,8 +13,5 @@
   },
   "dependencies": {
     "solid-js": "^1.S.1"
-  },
-  "engines": {
-    "node": ">=12"
   }
 }
