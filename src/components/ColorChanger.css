@@ -26,7 +26,7 @@
   border: 2px solid var(--action);
 }
 
-.colorChangers button.randomColor {
+.colorChangers button.randomColor, .colorChangers span .colorPicker #label {
   border: 2px solid var(--alternative);
   background-color: var(--black);
   color: var(--action);
@@ -36,3 +36,12 @@
   margin-left: 0px;
   margin-top: 2px;
 }
+.colorChangers span .colorPicker #label svg {
+  margin-top: 3px;
+}
+
+.colorChangers span .colorPicker #label svg {
+  margin-top: 3px;
+}
+
+

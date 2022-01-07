@@ -3,6 +3,7 @@ import './ColorChanger.css';
 import Popup from './Popup';
 import ColorPicker from './ColorPicker';
 import RandomColor from './RandomColor';
+import EyeDropper from './EyeDropper';
 
 export default function ColorChanger({ globalColor, onChangeColor }) {
   return (
@@ -19,6 +20,7 @@ export default function ColorChanger({ globalColor, onChangeColor }) {
             />
           ))}
           <RandomColor onChangeColor={onChangeColor} />
+          <EyeDropper onChangeColor={onChangeColor} />
           <ColorPicker
             globalColor={globalColor}
             onChangeColor={onChangeColor}
