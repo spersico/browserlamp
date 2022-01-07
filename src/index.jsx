@@ -6,7 +6,6 @@ import { colors, coloredLog } from './colors';
 import MainSwitch from './components/MainSwitch';
 import ColorChanger from './components/ColorChanger';
 import Footer from './components/Footer';
-import ColorPicker from './components/ColorPicker';
 
 function Home() {
   const [globalColor, setGlobalColor] = createSignal(colors[0].value);

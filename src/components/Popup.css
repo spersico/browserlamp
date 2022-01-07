@@ -25,7 +25,7 @@
 }
 
 /* Popup arrow */
-.popup .popuptext:before{
+.popup .popuptext:before {
   position: absolute;
   top: -5px;
   content: '';
@@ -65,8 +65,8 @@
 }
 
 .popup .popupOpener {
-    background-color: var(--dark);
-    color:var(--alternative);
+  background-color: var(--dark);
+  color: var(--alternative);
   border: 2px solid var(--alternative);
   border-radius: 2px;
   outline: none;
@@ -79,13 +79,13 @@
 .popup .popupOpener.initial {
   border: 2px solid var(--alternative);
 }
-  
+
 .popup .popupOpener.open {
   animation: borderIn 0.3s ease-in forwards;
 }
 .popup .popupOpener.closed {
-    animation: borderOut 0.3s ease-out forwards ;
-  }
+  animation: borderOut 0.3s ease-out forwards;
+}
 
 @keyframes borderIn {
   from {
@@ -97,12 +97,10 @@
 }
 
 @keyframes borderOut {
-    to {
-      border-color: var(--alternative);
-    }
-    from {
-      border-color: var(--action);
-    }
+  to {
+    border-color: var(--alternative);
   }
-
-
+  from {
+    border-color: var(--action);
+  }
+}

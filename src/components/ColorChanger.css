@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   width: 50px;
-  margin:10px 0px 0px 20px;
+  margin: 10px 0px 0px 20px;
 }
 
- .colorChangers{
+.colorChangers {
   display: flex;
   flex-direction: column;
   padding-top: 0em;
@@ -19,20 +19,20 @@
   outline: none;
   width: 40px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.colorChangers button.selected{
+.colorChangers button.selected {
   border: 2px solid var(--action);
 }
 
 .colorChangers button.randomColor {
   border: 2px solid var(--alternative);
   background-color: var(--black);
-  color:var(--action);
+  color: var(--action);
 }
 
 .colorChangers button.randomColor span {
-  margin-left:0px;
-  margin-top:2px;
+  margin-left: 0px;
+  margin-top: 2px;
 }
