@@ -12,3 +12,11 @@ npm run dev
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
+
+
+
+## License and Attributions
+
+[MIT](./license)
+
+Icons are from [Font Awesome](https://fontawesome.com/license) and [Material Design Icons](https://material.io/resources/icons/)
