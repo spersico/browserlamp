@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { onMount, createSignal } from 'solid-js';
 import { render } from 'solid-js/web';
 
 import './index.css';
@@ -17,10 +17,16 @@ function Home() {
     if (globalColor() !== colors[0].value && lastColor() !== globalColor()) {
       setLastColor(globalColor());
     }
+    localStorage.setItem('last', newColor);
     setGlobalColor(newColor);
     coloredLog('last', lastColor());
     coloredLog('global', globalColor());
   };
+
+  onMount(() => {
+    const last = localStorage.getItem('last') || colors[0].value;
+    onChangeGlobalColor(last);
+  });
 
   return (
     <main style={{ background: `rgb(${globalColor()})` }}>
